@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script defer type="module" src="./src/js/controller.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7e0877ff5a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>My Cashier Client</title>
+  </head>
+  <body>
+    <div class="overlay-my hidden">
+      <div class="modal-my hidden">
+        <button id="close-modal" value="close-modal">❌</button>
+        <div class="modal-cont-my">
+          <form class="user-form"></form>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1>My Cashier Client</h1>
+      <button id="nav-button">Login / Register</button>
+    </header>
+    <main>
+      <section class="product-list">
+        <form class="product-list-sort">
+          <ul>
+            <li>
+              <input
+                class="w-100"
+                type="text"
+                placeholder="Search"
+                name="product-query"
+              />
+            </li>
+            <li>
+              <select class="w-25" name="product-sort">
+                <option hidden>Sort</option>
+                <option value="sort-asc">Ascending</option>
+                <option value="sort-des">Descending</option>
+              </select>
+              <input
+                class="w-25"
+                name="product-min"
+                type="number"
+                placeholder="Min"
+              />
+              <input
+                class="w-25"
+                name="product-max"
+                type="number"
+                placeholder="Max"
+              />
+              <select class="w-25" name="product-cat">
+                <option hidden>Catagory</option>
+                <option value="cat-food">Food</option>
+                <option value="cat-animals">Animals</option>
+                <option value="cat-clothing">Clothing</option>
+              </select>
+            </li>
+            <li>
+              <button type="submit" class="w-75">Search</button>
+              <input type="reset" class="w-25 search-reset" />
+            </li>
+          </ul>
+        </form>
+        <div id="product_new" class="product-card">
+          <i style="font-size: 100px" class="fa-regular fa-square-plus"></i>
+          <h4>Add a new product</h4>
+        </div>
+        <div class="cards-cont"></div>
+      </section>
+      <section class="product-edit"></section>
+    </main>
+  </body>
+</html>

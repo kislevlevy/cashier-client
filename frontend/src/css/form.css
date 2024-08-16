@@ -1,0 +1,134 @@
+::selection {
+  background: #4158d0;
+  color: #fff;
+}
+.user-title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(-135deg, #4158d0, #c850c0);
+}
+.user-form {
+  top: 0;
+  padding: 10px;
+  height: 100%;
+}
+.user-form .user-field {
+  height: 60px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-form .user-field input {
+  height: 100%;
+  width: calc(100% - 30px);
+  outline: none;
+  font-size: 17px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  padding: 0 15px;
+}
+.user-form .user-field input:focus,
+form .user-field input:valid {
+  border-color: #4158d0;
+}
+.user-form .user-field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .user-field input:focus ~ label,
+form .user-field input:valid ~ label {
+  top: 18%;
+  font-size: 16px;
+  color: #4158d0;
+  background-color: rgba(0, 0, 0, 0);
+}
+form .content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content input {
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label {
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link {
+  color: '';
+}
+form .user-field input[type='submit'] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4158d0, #c850c0);
+  transition: all 0.3s ease;
+}
+form .user-field input[type='submit']:active {
+  transform: scale(0.95);
+}
+form .signup-link {
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a {
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+.user-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-modal p {
+  font-size: 20px;
+  line-height: 0;
+}
+.user-modal button {
+  width: 150px;
+  height: 30px;
+  margin: 20px;
+
+  border-radius: 7px;
+
+  color: white;
+  background: linear-gradient(-135deg, #4158d0, #c850c0);
+}
+.user-modal button:hover {
+  cursor: pointer;
+  filter: opacity(80%);
+}
