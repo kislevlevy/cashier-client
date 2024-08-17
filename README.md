@@ -27,10 +27,10 @@ A robust store management software designed for secure and efficient product man
 ### Back-End
 
 - Node.js
+- Express
 - MongoDB
 - Mongoose
-- Atlas DB
-- Express
+- JWT
 
 ## Skills Demonstrated
 

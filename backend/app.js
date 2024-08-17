@@ -12,22 +12,30 @@ const AppError = require('./utils/appError');
 // App initiation:
 const app = express();
 
+// Cors Configuration:
+const corsWhiteList = [process.env.FRONT_END, process.env.FRONT_END + '/'];
+const corsConfig = {
+  origin: (origin, callback) => {
+    if (!origin || corsWhiteList.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
 // Middleware:
-app.use(cookieParser());
 app.use('/public', express.static('public'));
-app.use(
-  cors({
-    origin: process.env.FRONT_END,
-    credentials: true,
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors(corsConfig));
+app.use(cookieParser());
 app.use(express.json());
-app.use(morgan('dev'));
+app.use(morgan(process.env.NODE_ENV === 'prod' ? 'combined' : 'dev'));
 
 // Routes middleware:
-app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', usersRoutes);
+app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/feedbacks', feedbackRoutes);
 
 // All routes:

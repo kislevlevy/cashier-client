@@ -10,9 +10,13 @@ export const state = {
 
 export const login = async function (body) {
   try {
-    const { data } = await axios.post(`${config.API_URL_USER}/login`, body, {
-      withCredentials: true,
-    });
+    const { data } = await axios.post(
+      `${config.BACK_END}${config.API_USER}/login`,
+      body,
+      {
+        withCredentials: true,
+      }
+    );
 
     return data;
   } catch (err) {
@@ -22,7 +26,10 @@ export const login = async function (body) {
 
 export const register = async function (body) {
   try {
-    const res = await axios.post(`${config.API_URL_USER}/register`, body);
+    const res = await axios.post(
+      `${config.BACK_END}${config.API_USER}/register`,
+      body
+    );
     return res;
   } catch (err) {
     throw err;
@@ -32,7 +39,7 @@ export const register = async function (body) {
 export const logout = async function () {
   try {
     const res = await axios.post(
-      `${config.API_URL_USER}/logout`,
+      `${config.BACK_END}${config.API_USER}/logout`,
       {},
       { withCredentials: true }
     );
@@ -44,7 +51,10 @@ export const logout = async function () {
 
 export const forgot = async function (body) {
   try {
-    const res = await axios.post(`${config.API_URL_USER}/forgotPassword`, body);
+    const res = await axios.post(
+      `${config.BACK_END}${config.API_USER}/forgotPassword`,
+      body
+    );
     return res;
   } catch (err) {
     throw err;
@@ -54,7 +64,7 @@ export const forgot = async function (body) {
 export const reset = async function (token, body) {
   try {
     const res = await axios.post(
-      `${config.API_URL_USER}/resetPassword/${token}`,
+      `${config.BACK_END}${config.API_USER}/resetPassword/${token}`,
       body
     );
     return res;

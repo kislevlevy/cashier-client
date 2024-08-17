@@ -33,7 +33,10 @@ export const getProducts = async function () {
       withCredentials: true,
     };
 
-    const { data } = await axios.get(config.API_URL_PRODUCT, options);
+    const { data } = await axios.get(
+      `${config.BACK_END}${config.API_PRODUCT}`,
+      options
+    );
 
     if (state.isFirst) state.products = data.products.sort((a, b) => a.id - b.id);
     state.isFirst = false;
@@ -46,9 +49,12 @@ export const getProducts = async function () {
 
 export const getProductById = async function (id) {
   try {
-    const { data } = await axios.get(`${config.API_URL_PRODUCT}/${id}`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.get(
+      `${config.BACK_END}${config.API_PRODUCT}/${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     return data.product;
   } catch (err) {
     throw err;
@@ -57,9 +63,13 @@ export const getProductById = async function (id) {
 
 export const postProduct = async function (body) {
   try {
-    const { data } = await axios.post(config.API_URL_PRODUCT, body, {
-      withCredentials: true,
-    });
+    const { data } = await axios.post(
+      `${config.BACK_END}${config.API_PRODUCT}`,
+      body,
+      {
+        withCredentials: true,
+      }
+    );
     return data;
   } catch (err) {
     throw err;
@@ -68,10 +78,14 @@ export const postProduct = async function (body) {
 
 export const patchProductById = async function (id, body) {
   try {
-    const { data } = await axios.patch(`${config.API_URL_PRODUCT}/${id}`, body, {
-      withCredentials: true,
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
+    const { data } = await axios.patch(
+      `${config.BACK_END}${config.API_PRODUCT}/${id}`,
+      body,
+      {
+        withCredentials: true,
+        headers: { 'Content-Type': 'multipart/form-data' },
+      }
+    );
     console.log(data);
     return data;
   } catch (err) {
@@ -81,7 +95,7 @@ export const patchProductById = async function (id, body) {
 
 export const deleteProductById = async function (id) {
   try {
-    await axios.delete(`${config.API_URL_PRODUCT}/${id}`, {
+    await axios.delete(`${config.BACK_END}${config.API_PRODUCT}/${id}`, {
       withCredentials: true,
     });
   } catch (err) {
@@ -91,7 +105,7 @@ export const deleteProductById = async function (id) {
 
 export const postProductFeedback = async function (body) {
   try {
-    const res = await axios.post(config.API_URL_FEEDBACK, body, {
+    const res = await axios.post(`${config.BACK_END}${config.API_FEEDBACK}`, body, {
       withCredentials: true,
     });
     return res;
