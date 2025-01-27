@@ -1,8 +1,8 @@
 # Cashier Client
 
-## Description
+## Project Overview
 
-A robust store management software designed for secure and efficient product management. This application provides features like role-based access control, secure user authentication, and comprehensive product management including adding, editing, removing products, and handling feedback. Additionally, it offers password management features and product image uploads, ensuring a secure and user-friendly experience.
+Cashier Client is a robust store management software designed for secure and efficient product management. This application provides features like role-based access control, secure user authentication, and comprehensive product management including adding, editing, removing products, and handling feedback. Additionally, it offers password management features and product image uploads, ensuring a secure and user-friendly experience.
 
 ## Features
 
@@ -15,26 +15,69 @@ A robust store management software designed for secure and efficient product man
 - Full communication with Atlas DB
 - Responsive and user-friendly interface
 
-## Built With
+## Technologies and Tools
 
 ### Front-End
 
-- JavaScript
-- Custom CSS
-- HTML
-- JSON
+- **JavaScript:** Adds interactivity and functionality to the web pages
+- **Custom CSS:** Styles the web pages
+- **HTML:** Structures the web pages
+- **JSON:** Data interchange format
+- **Object-Oriented Programming (OOP):** Used to create modular and reusable code
 
 ### Back-End
 
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-- JWT
+- **Node.js:** JavaScript runtime for server-side development
+- **Express:** Web application framework for Node.js
+- **MongoDB:** NoSQL database for storing application data
+- **Mongoose:** ODM for MongoDB
+- **JWT:** JSON Web Tokens for secure authentication
 
 ## Skills Demonstrated
 
-- Secure user authentication and role management
-- Database communication using MongoDB, Mongoose, and Atlas DB
-- Full-stack development with Node.js and Express
-- Front-end development with custom CSS, HTML, and JavaScript
+- **Secure user authentication and role management:** Ensuring only authorized users can access certain features
+- **Database communication:** Using MongoDB, Mongoose, and Atlas DB for data storage and retrieval
+- **Full-stack development:** Building both the front-end and back-end of the application
+- **Front-end development:** Creating a responsive and user-friendly interface with custom CSS, HTML, and JavaScript
+
+## Installation
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kislevlevy/cashier-client
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd cashier-client
+   ```
+
+To run the front-end and back-end separately in development mode:
+
+1. Navigate to the back-end directory:
+
+   ```bash
+   cd backend
+   ```
+
+2. Start the back-end server:
+   ```bash
+   npm run start:dev
+   ```
+3. Open a new terminal and navigate to the front-end directory:
+
+   ```bash
+   cd frontend
+   ```
+
+4. Start the front-end server:
+   ```bash
+   npm run start:dev
+   ```
+
+## Usage
+
+- Access the application through your web browser.
+- Log in with your credentials to access the features based on your role.
+- Manage products, handle feedback, and perform other store management tasks.

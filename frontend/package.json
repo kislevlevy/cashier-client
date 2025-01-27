@@ -1,13 +1,10 @@
 {
-  "name": "app",
+  "name": "frontend",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel index.html",
+    "start:dev": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "axios": "^1.7.2",
