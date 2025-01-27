@@ -53,7 +53,7 @@ To run the project locally, follow these steps:
    cd cashier-client
    ```
 
-To run the front-end and back-end separately in development mode:
+### Backend Installation
 
 1. Navigate to the back-end directory:
 
@@ -61,19 +61,34 @@ To run the front-end and back-end separately in development mode:
    cd backend
    ```
 
-2. Start the back-end server:
+2. Install the back-end dependencies:
+
    ```bash
-   npm run start:dev
+   npm install
    ```
-3. Open a new terminal and navigate to the front-end directory:
+
+3. Start the back-end server:
+   ```bash
+   npm run dev
+   ```
+
+### Frontend Installation
+
+1. Open a new terminal and navigate to the front-end directory:
 
    ```bash
    cd frontend
    ```
 
-4. Start the front-end server:
+2. Install the front-end dependencies:
+
    ```bash
-   npm run start:dev
+   npm install
+   ```
+
+3. Start the front-end server:
+   ```bash
+   npm run dev
    ```
 
 ## Usage

@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "scripts": {
-    "start:dev": "parcel index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
   "dependencies": {
